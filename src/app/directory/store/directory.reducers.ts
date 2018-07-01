@@ -1,4 +1,5 @@
 import { Directory } from '../directory.model';
+import * as DirectoryActions from './directory.actions';
 
 export interface State {
     directories: Directory[];
@@ -38,4 +39,34 @@ const initialState: State = {
                       '07143349664'),
     ]
 };
+
+export function directoryReducer(state = initialState, action: DirectoryActions.DirectoryActions) {
+    switch (action.type) {
+        case(DirectoryActions.ADD_DIRECTORY):
+            return {
+                ...state,
+                directories: [...state.directories, action.payload]
+            };
+        case(DirectoryActions.UPDATE_DIRECTORY):
+            const directory = state.directories[action.payload.index]; // old directory
+            const UpdateDirectory = {
+                ...directory,
+                ...action.payload.updateDirectory
+            };
+            const directories = [...state.directories];
+            directories[action.payload.index] = UpdateDirectory;
+            return {
+                ...state,
+                disctories: directories
+            };
+        case(DirectoryActions.DELETE_DIRECTORY):
+            const oldDirectories = [...state.directories];
+            oldDirectories.splice(action.payload, 1);
+            return {
+                ...state,
+                directories: oldDirectories
+            };
+        }
+        return state;
+}
 

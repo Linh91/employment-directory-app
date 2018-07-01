@@ -10,7 +10,7 @@ export const FETCH_DIRECTORY = 'FETCH_DIRECTORY';
 export class AddDirectory implements Action {
     readonly type = ADD_DIRECTORY;
 
-     constructor(public payload: Directory[]) {}
+     constructor(public payload: Directory) {}
 }
 
 export class UpdateDirectory implements Action {
