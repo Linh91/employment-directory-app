@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DirectoryNewComponent } from './directory-new.component';
+import { DirectoryComponent } from './directory.component';
 
-describe('DirectoryNewComponent', () => {
-  let component: DirectoryNewComponent;
-  let fixture: ComponentFixture<DirectoryNewComponent>;
+describe('DirectoryComponent', () => {
+  let component: DirectoryComponent;
+  let fixture: ComponentFixture<DirectoryComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DirectoryNewComponent ]
+      declarations: [ DirectoryComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DirectoryNewComponent);
+    fixture = TestBed.createComponent(DirectoryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
