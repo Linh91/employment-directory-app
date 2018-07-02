@@ -1,7 +1,4 @@
-<p>
-  directory-list works!
-</p>
+<h3>Name of employees</h3>
 <app-directory-item *ngFor="let directoriesElement of (directoryState | async).directories; let i = index"
                       [directory]="directoriesElement"
                       [index]="i"></app-directory-item>
-                      <button (click)="something()">button</button>
