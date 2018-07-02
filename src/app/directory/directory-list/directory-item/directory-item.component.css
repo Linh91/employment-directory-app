@@ -1,0 +1,14 @@
+.list-link {
+    text-decoration: none;
+}
+
+.list-heading {
+    font-family: 'Open Sans', sans-serif;
+    color: #272930;
+    text-align: center;
+}
+
+.link-box {
+    border: 1px solid grey;
+    width: 200px;
+}

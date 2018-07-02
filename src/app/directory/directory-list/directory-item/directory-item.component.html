@@ -1,7 +1,10 @@
-<a style="cursor: pointer"
-  routerLinkActive="active"
-  [routerLink]="[index]">
-  <div class="pull-left">
-    <h4 class="list-group-item-heading">{{ directory.name }}</h4>
-  </div>
-</a>
+<div class="link-box">
+  <a style="cursor: pointer"
+    routerLinkActive="active"
+    [routerLink]="[index]"
+    class="list-link">
+    <div class="pull-left">
+      <p class="list-heading">{{ directory.name }}</p>
+    </div>
+  </a>
+</div>

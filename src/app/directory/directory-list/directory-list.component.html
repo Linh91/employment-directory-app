@@ -1,4 +1,4 @@
-<h3>Name of employees</h3>
+<h3 class="directory-title">Employee Directory</h3>
 <app-directory-item *ngFor="let directoriesElement of (directoryState | async).directories; let i = index"
                       [directory]="directoriesElement"
                       [index]="i"></app-directory-item>
