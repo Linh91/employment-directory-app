@@ -1,0 +1,15 @@
+.right {
+    float: right;
+}
+
+.left {
+    float: left
+}
+
+.content {
+    width: 600px;
+}
+
+.main-title {
+    text-align: center;
+}

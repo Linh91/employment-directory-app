@@ -4,11 +4,19 @@
 
 .list-heading {
     font-family: 'Open Sans', sans-serif;
-    color: #272930;
+    color: #3d62bf;
     text-align: center;
 }
 
 .link-box {
     border: 1px solid grey;
     width: 200px;
+}
+
+.link-box:hover {
+    background-color: grey;
+}
+
+.left {
+    align-items: left;
 }
