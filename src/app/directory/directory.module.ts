@@ -1,3 +1,4 @@
+import { StoreModule } from '@ngrx/store';
 import { DirectoryComponent } from './directory.component';
 import { DirectoryDetailComponent } from './directory-detail/directory-detail.component';
 import { DirectoryEditComponent } from './directory-edit/directory-edit.component';
@@ -8,11 +9,13 @@ import { DirectoryStartComponent } from './directory-start/directory-start.compo
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DirectoryItemComponent } from './directory-list/directory-item/directory-item.component';
+import { directoryReducer } from './store/directory.reducers';
 
 @NgModule({
   imports: [
     CommonModule,
-    DirectoryRoutingModule
+    DirectoryRoutingModule,
+    StoreModule.forFeature('directories', directoryReducer),
   ],
   declarations: [
     DirectoryComponent,

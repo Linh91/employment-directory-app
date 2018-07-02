@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Directory } from './../../directory.model';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-directory-item',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./directory-item.component.css']
 })
 export class DirectoryItemComponent implements OnInit {
+  @Input() directory: Directory;
+  @Input() index: number;
 
   constructor() { }
 
