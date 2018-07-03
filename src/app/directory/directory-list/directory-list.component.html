@@ -1,3 +1,6 @@
+<div>
+    <button class="button" (click)="addNewDirectory()">New Directory</button>
+</div>
 <app-directory-item *ngFor="let directoriesElement of (directoryState | async).directories; let i = index"
                       [directory]="directoriesElement"
                       [index]="i"></app-directory-item>

@@ -1,3 +1,4 @@
+import { Router, ActivatedRoute } from '@angular/router';
 import { Directory } from './../directory.model';
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
@@ -13,7 +14,14 @@ import * as directoryReducer from '../store/directory.reducers';
 export class DirectoryListComponent implements OnInit {
   directoryState: Observable<directoryReducer.State>;
 
-  constructor(private store: Store<directoryReducer.DirectoryState>) { }
+  constructor(private store: Store<directoryReducer.DirectoryState>,
+              private router: Router,
+              private route: ActivatedRoute) { }
+
+  addNewDirectory() {
+    console.log('add new');
+    this.router.navigate(['/new'], {relativeTo: this.route});
+  }
 
   ngOnInit() {
     console.log('hello', this.store.select('directories'));

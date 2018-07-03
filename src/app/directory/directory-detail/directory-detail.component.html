@@ -1,7 +1,16 @@
-<h1>{{ (directoryState | async).directories[id].name }}</h1>
-<h4>Age: {{ (directoryState | async).directories[id].age }}</h4>
-<h4>Title: {{ (directoryState | async).directories[id].title }}</h4>
-<h4>Address: {{ (directoryState | async).directories[id].address }}</h4>
-<h4>Tele: {{ (directoryState | async).directories[id].telephone }}</h4>
-<button class="button" (click)="editDirectory()">Edit</button>
-<button class="button" (click)="deleteDirectory()">Delete</button>
+
+<div>
+  <div>
+    <h1>{{ (directoryState | async).directories[id].name }}</h1>
+  </div>
+  <div>
+    <h4>Age: {{ (directoryState | async).directories[id].age }}</h4>
+    <h4>Title: {{ (directoryState | async).directories[id].title }}</h4>
+    <h4>Address: {{ (directoryState | async).directories[id].address }}</h4>
+    <h4>Tele: {{ (directoryState | async).directories[id].telephone }}</h4>
+  </div>
+  <div>
+    <button class="button" (click)="editDirectory()">Edit</button>
+    <button class="button" (click)="deleteDirectory()">Delete</button>
+  </div>
+</div>
