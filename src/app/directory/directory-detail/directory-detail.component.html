@@ -3,5 +3,5 @@
 <h4>Title: {{ (directoryState | async).directories[id].title }}</h4>
 <h4>Address: {{ (directoryState | async).directories[id].address }}</h4>
 <h4>Tele: {{ (directoryState | async).directories[id].telephone }}</h4>
-<button (click)="editDirectory()">Edit</button>
-<button (click)="deleteDirectory()">Delete</button>
+<button class="button" (click)="editDirectory()">Edit</button>
+<button class="button" (click)="deleteDirectory()">Delete</button>
