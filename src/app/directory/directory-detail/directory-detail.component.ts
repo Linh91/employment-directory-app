@@ -2,8 +2,9 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 
+import * as DirectoryActions from './../store/directory.actions';
 import * as directoryReducer from '../store/directory.reducers';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-directory-detail',
@@ -15,7 +16,19 @@ export class DirectoryDetailComponent implements OnInit {
   id: number;
 
   constructor(private route: ActivatedRoute,
+              private router: Router,
               private store: Store<directoryReducer.DirectoryState>) { }
+
+  editDirectory() {
+    console.log('edit');
+  }
+
+  deleteDirectory() {
+    console.log('delete');
+    console.log('id', this.id);
+    this.store.dispatch(new DirectoryActions.DeleteDirectory(this.id));
+    this.router.navigate(['/directory'], {relativeTo: this.route});
+  }
 
   ngOnInit() {
     this.route.params
