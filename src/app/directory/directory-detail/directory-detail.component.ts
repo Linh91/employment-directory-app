@@ -21,7 +21,7 @@ export class DirectoryDetailComponent implements OnInit {
 
   editDirectory() {
     console.log('edit');
-    this.router.navigate(['edit'], {relativeTo: this.route});
+    this.router.navigate(['new'], {relativeTo: this.route});
   }
 
   deleteDirectory() {

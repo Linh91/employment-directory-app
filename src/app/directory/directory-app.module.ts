@@ -1,6 +1,6 @@
 import { DirectoryDetailComponent } from './directory-detail/directory-detail.component';
 import { DirectoryComponent } from './directory.component';
-import { DirectoryEditComponent } from './directory-edit/directory-edit.component';
+import { DirectoryNewComponent } from './directory-new/directory-new.component';
 import { DirectoryStartComponent } from './directory-start/directory-start.component';
 
 import { CommonModule } from '@angular/common';
@@ -10,9 +10,9 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 const directoryRoutes: Routes = [
   { path: '', component: DirectoryComponent, children: [
     { path: '', component: DirectoryStartComponent },
-    { path: 'new', component: DirectoryEditComponent },
+    { path: 'new', component: DirectoryNewComponent },
     { path: ':id', component: DirectoryDetailComponent },
-    { path: ':id/edit', component: DirectoryEditComponent },
+    { path: ':id/new', component: DirectoryNewComponent },
   ] },
 ];
 

@@ -7,14 +7,12 @@ import * as directoryReducer from '../store/directory.reducers';
 import * as DirectoryActions from './../store/directory.actions';
 
 @Component({
-  selector: 'app-directory-edit',
-  templateUrl: './directory-edit.component.html',
-  styleUrls: ['./directory-edit.component.css']
+  selector: 'app-directory-new',
+  templateUrl: './directory-new.component.html',
+  styleUrls: ['./directory-new.component.css']
 })
-export class DirectoryEditComponent implements OnInit {
+export class DirectoryNewComponent implements OnInit {
   newDirectoryForm: FormGroup;
-
-  editMode = false;
 
   constructor(private formBuilder: FormBuilder,
               private router: Router,

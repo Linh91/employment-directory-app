@@ -1,7 +1,7 @@
 import { StoreModule } from '@ngrx/store';
 import { DirectoryComponent } from './directory.component';
 import { DirectoryDetailComponent } from './directory-detail/directory-detail.component';
-import { DirectoryEditComponent } from './directory-edit/directory-edit.component';
+import { DirectoryNewComponent } from './directory-new/directory-new.component';
 import { DirectoryListComponent } from './directory-list/directory-list.component';
 import { DirectoryRoutingModule } from './directory-app.module';
 import { DirectoryStartComponent } from './directory-start/directory-start.component';
@@ -22,7 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     DirectoryComponent,
     DirectoryStartComponent,
-    DirectoryEditComponent,
+    DirectoryNewComponent,
     DirectoryListComponent,
     DirectoryDetailComponent,
     DirectoryItemComponent
