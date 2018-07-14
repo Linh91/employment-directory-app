@@ -10,12 +10,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DirectoryItemComponent } from './directory-list/directory-item/directory-item.component';
 import { directoryReducer } from './store/directory.reducers';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     DirectoryRoutingModule,
     StoreModule.forFeature('directories', directoryReducer),
+    ReactiveFormsModule
   ],
   declarations: [
     DirectoryComponent,

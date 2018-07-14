@@ -20,7 +20,7 @@ export class DirectoryListComponent implements OnInit {
 
   addNewDirectory() {
     console.log('add new');
-    this.router.navigate(['/new'], {relativeTo: this.route});
+    this.router.navigate(['new'], {relativeTo: this.route});
   }
 
   ngOnInit() {
