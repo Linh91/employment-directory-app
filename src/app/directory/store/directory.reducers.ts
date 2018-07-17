@@ -52,16 +52,18 @@ export function directoryReducer(state = initialState, action: DirectoryActions.
                 directories: [...state.directories, action.payload]
             };
         case(DirectoryActions.UPDATE_DIRECTORY):
+        // tslint:disable-next-line:no-debugger
+        debugger;
             const directory = state.directories[action.payload.index]; // old directory
-            const UpdateDirectory = {
+            const updateDirectory = {
                 ...directory,
                 ...action.payload.updateDirectory
-            };
-            const directories = [...state.directories];
-            directories[action.payload.index] = UpdateDirectory;
+            }; // add new directory
+            const newDirectories = [...state.directories]; // old directory array
+            newDirectories[action.payload.index] = updateDirectory; // find edited dir and replace with new dir
             return {
                 ...state,
-                disctories: directories
+                directories: newDirectories
             };
         case(DirectoryActions.DELETE_DIRECTORY):
             const oldDirectories = [...state.directories];

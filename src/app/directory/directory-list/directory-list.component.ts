@@ -18,14 +18,14 @@ export class DirectoryListComponent implements OnInit {
               private router: Router,
               private route: ActivatedRoute) { }
 
+  ngOnInit() {
+    console.log('hello', this.store.select('directories'));
+    this.directoryState = this.store.select('directories');
+    console.log('list', this.directoryState);
+  }
+
   addNewDirectory() {
     console.log('add new');
     this.router.navigate(['new'], {relativeTo: this.route});
   }
-
-  ngOnInit() {
-    console.log('hello', this.store.select('directories'));
-    this.directoryState = this.store.select('directories');
-  }
-
 }

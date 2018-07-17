@@ -1,3 +1,4 @@
+import { DirectoryEditComponent } from './directory-edit/directory-edit.component';
 import { DirectoryDetailComponent } from './directory-detail/directory-detail.component';
 import { DirectoryComponent } from './directory.component';
 import { DirectoryNewComponent } from './directory-new/directory-new.component';
@@ -12,7 +13,7 @@ const directoryRoutes: Routes = [
     { path: '', component: DirectoryStartComponent },
     { path: 'new', component: DirectoryNewComponent },
     { path: ':id', component: DirectoryDetailComponent },
-    { path: ':id/new', component: DirectoryNewComponent },
+    { path: ':id/edit', component: DirectoryEditComponent },
   ] },
 ];
 

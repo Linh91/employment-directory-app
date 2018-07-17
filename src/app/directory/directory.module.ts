@@ -1,3 +1,4 @@
+import { DirectoryEditComponent } from './directory-edit/directory-edit.component';
 import { StoreModule } from '@ngrx/store';
 import { DirectoryComponent } from './directory.component';
 import { DirectoryDetailComponent } from './directory-detail/directory-detail.component';
@@ -23,6 +24,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     DirectoryComponent,
     DirectoryStartComponent,
     DirectoryNewComponent,
+    DirectoryEditComponent,
     DirectoryListComponent,
     DirectoryDetailComponent,
     DirectoryItemComponent
