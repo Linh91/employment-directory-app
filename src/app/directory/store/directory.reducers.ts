@@ -52,8 +52,6 @@ export function directoryReducer(state = initialState, action: DirectoryActions.
                 directories: [...state.directories, action.payload]
             };
         case(DirectoryActions.UPDATE_DIRECTORY):
-        // tslint:disable-next-line:no-debugger
-        debugger;
             const directory = state.directories[action.payload.index]; // old directory
             const updateDirectory = {
                 ...directory,

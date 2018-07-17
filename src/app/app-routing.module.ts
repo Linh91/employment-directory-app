@@ -6,8 +6,7 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'directory', loadChildren: './directory/directory.module#DirectoryModule' },
-  // { path: 'recipes', loadChildren: './recipes/recipes.module#RecipeModule'}
+  { path: 'directory', loadChildren: './directory/directory.module#DirectoryModule' }
 ];
 
 @NgModule({

@@ -23,11 +23,5 @@ export class DeleteDirectory implements Action {
 
      constructor(public payload: number) {}
 }
-export class StoreDirectory implements Action {
-    readonly type = STORE_DIRECTORY;
-}
-export class FetchDirectory implements Action {
-    readonly type = FETCH_DIRECTORY;
-}
 
-export type DirectoryActions = AddDirectory | UpdateDirectory | DeleteDirectory | StoreDirectory | FetchDirectory;
+export type DirectoryActions = AddDirectory | UpdateDirectory | DeleteDirectory;
